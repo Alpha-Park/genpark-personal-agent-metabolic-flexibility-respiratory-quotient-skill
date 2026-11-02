@@ -1,0 +1,23 @@
+{
+  "name": "genpark-personal-agent-metabolic-flexibility-respiratory-quotient-skill",
+  "version": "1.0.0",
+  "description": "Calculates indirect calorimetry Respiratory Exchange Ratio (RER), Weir caloric expenditure, absolute fat vs CHO oxidation rates (g/hr), and evaluates fasting switch.",
+  "tools": [
+    {
+      "name": "calculate_substrate_oxidation_and_rer",
+      "description": "Calculates Respiratory Exchange Ratio (RER), fat vs carbohydrate oxidation rates, and caloric expenditure.",
+      "parameters": {
+        "vo2_ml_min": "float (default 350.0)",
+        "vco2_ml_min": "float (default 270.0)"
+      }
+    },
+    {
+      "name": "evaluate_fasting_metabolic_switch",
+      "description": "Evaluates whether the physiological fasting metabolic switch to lipid beta-oxidation has been achieved.",
+      "parameters": {
+        "fasting_hours": "float (default 16.0)",
+        "current_rq": "float (default 0.74)"
+      }
+    }
+  ]
+}
